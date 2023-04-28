@@ -2,8 +2,9 @@
 
 
 # Project Title
+Image Searcher
 
-
+## Description
 This website allows the user to search for images and then save those images 
 
 ## Features
