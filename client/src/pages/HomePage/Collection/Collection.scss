@@ -1,0 +1,25 @@
+.Collection{
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+
+    .TopContainer {
+        background-color: rgb(57, 46, 107);
+        height: 20vh;
+        width: 100%;
+        .TopContainer__div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+        }
+      }
+      .ImagesCollection {
+        background-color: rgb(255, 255, 246);
+        margin-top: 5vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+}

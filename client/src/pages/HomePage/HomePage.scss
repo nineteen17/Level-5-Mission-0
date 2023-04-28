@@ -1,0 +1,206 @@
+
+.HomePage {
+  background-color: white;
+  width: 100%;
+  .HomePage__Header {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .Header__LContainer {
+      background-color: white;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      .LContainer__Item1 {
+        // background-color: rgb(130, 130, 66);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 5vw;
+        text-align: center;
+        margin-left: 7vw;
+      }
+      .LContainer__Item2 {
+        // background-color: pink;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 15vw;
+        font-size: 1.5em;
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        margin-right: 20vw;
+      }
+      .LContainer__FaBars {
+        display: none;
+      }
+      .Header__Mobile {
+        display: none;
+      }
+    }
+
+    .Header__RContainer {
+      // background-color: orange;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 2vw;
+
+      .RContainer__Item1 {
+        // background-color: purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5vw;
+        height: 5vh;
+        text-align: center;
+
+        &:hover {
+          background-color: rgb(57, 46, 107);
+          color: #fff;
+          opacity: 0.9;
+          cursor: pointer;
+        }
+      }
+      .RContainer__Item2 {
+        // background-color: brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5vw;
+        text-align: center;
+      }
+      .RContainer__Item3 {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5vw;
+        text-align: center;
+      }
+      .RContainer__Item4 {
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5vw;
+        text-align: center;
+        margin-right: 5vw;
+        &:hover {
+          background-color: rgb(57, 46, 107);
+          color: #fff;
+          opacity: 0.9;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+}
+
+
+@media (max-width: 768px) {
+  .HomePage {
+    .HomePage__Header {
+      display: flex;
+      flex-direction: column;
+
+      .Header__LContainer{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .LContainer__FaBars {
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 5vw;
+          color: var(--secondary-color);
+          cursor: pointer;
+        }
+
+        .LContainer__Item1 {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 2rem;
+        }
+        .LContainer__Item2 {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 1rem;
+          width: 40vw;
+        }
+      }
+      .Header__Mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        margin-top: 5vw;
+        margin-left: 72vw;
+        margin-bottom: 5vw;
+        cursor: pointer;
+        animation: slide 0.5s ease-in-out;
+        @keyframes slide {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(0%);
+          }
+        }
+        .Item1,
+        .Item2,
+        .Item3,
+        .Item4 {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          font-size: 1rem;
+          &:hover {
+            color: rgb(57, 46, 107);
+            
+            opacity: 0.9;
+            cursor: pointer;
+            text-decoration: underline rgb(57, 46, 107);
+          }
+        }
+        button {
+          background-color: var(--button-color);
+          color: #fad1ff;
+          height: 1.5rem;
+          width: 5rem;
+          font-size: 0.8rem;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: #994fa3;
+          }
+        }
+      }
+
+      .Header__RContainer{
+        display: none;
+      }
+    }
+  }
+}
+// button variable example
+$button-styles: (
+  background-color: #007bff,
+  color: #fff,
+  font-size: 16px,
+  padding: 10px 20px,
+  border-radius: 5px,
+);
+
+.Button {
+  @each $property, $value in $button-styles {
+    #{$property}: $value;
+  }
+}

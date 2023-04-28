@@ -1,0 +1,118 @@
+.HomePage {
+  .Home {
+    height: 200vh;
+
+    .Home__SearchContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(57, 46, 107);
+      height: 20vh;
+
+   
+      .SearchContainer__SearchField {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+ 
+      }
+
+      .SearchField__Input {
+        background-color: #f9fafb;
+        border: 1px solid #cbd2d9;
+        font-size: 0.875rem;
+        width: 100%;
+        padding: 0.625rem;
+        outline: none;
+        border-radius: 0.25rem 0 0 0.25rem;
+      }
+
+      .SearchField__Button {
+        background-color: RGB(245, 101, 202);
+        padding: 0.625rem 1.5rem;
+        color: white;
+        border-radius: 0 0.25rem 0.25rem 0;
+        outline: none;
+      }
+      .SearchField__Button:hover {
+        opacity: 0.9;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      @media (max-width: 700px) {
+        .SearchContainer__SearchField {
+          width: 50%;
+        }
+
+      }
+
+
+    }
+
+    .Home__Images {
+      background-color: rgb(255, 255, 246);
+      margin-top: 5vh;
+      .Images__h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .Images__Layout {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+
+        @media (min-width: 1024px) {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @media (min-width: 1280px) {
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+
+        margin-top: 2.5rem;
+        max-width: 100rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-decoration: none;
+      }
+
+      .Home__Relative {
+        .Relative__Image {
+          height: 18rem;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+            0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: RGB(245, 101, 202);
+          width: 100%;
+          padding-top: 0.625rem;
+          padding-bottom: 0.625rem;
+          color: white;
+          border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+          outline: none;
+          border: none;
+        }
+
+        button:hover {
+          background-color: rgb(57, 46, 107);
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
